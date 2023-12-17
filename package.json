@@ -1,0 +1,29 @@
+{
+  "name": "typescript-skeleton-template",
+  "version": "0.0.1",
+  "description": "Skeleton for typescript project with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf dist && tsc -p src",
+    "debug": "rm -rf dist && tsc -p src -w & node --inspect-brk ./dist/index.js",
+    "start": "npm run build && node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ]
+  }
+}
